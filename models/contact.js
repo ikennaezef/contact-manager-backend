@@ -14,6 +14,11 @@ const contactSchema = new mongoose.Schema(
 			type: String,
 			required: [true, "Please add the contact phone number"],
 		},
+		userID: {
+			type: mongoose.Schema.Types.ObjectId,
+			required: true,
+			ref: "User",
+		},
 	},
 	{
 		timestamps: true,
